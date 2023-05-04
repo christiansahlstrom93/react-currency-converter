@@ -1,0 +1,29 @@
+{
+  "name": "currency-converter-widget",
+  "version": "1.0.15",
+  "description": "A widget that converts currencies from the current rates",
+  "main": "./dist/index.js",
+  "types": "index.d.ts",
+  "homepage": "https://algobook.info/",
+  "keywords": [
+    "currency",
+    "currency converter",
+    "currency converter widget",
+    "react currency converter"
+  ],
+  "scripts": {
+    "build": "babel src/ -d dist --copy-files"
+  },
+  "author": "Christian Frahm Sahlström",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^9.1.2"
+  }
+}

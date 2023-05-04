@@ -1,0 +1,109 @@
+.converter {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0rem 0.25rem 1rem RGB(0 0 0 / 10%);
+  padding: 1rem 1rem 0 1rem;
+  width: auto;
+  min-width: 260px;
+  max-width: 350px;
+  font-size: 14px;
+  color: #5f6368;
+}
+
+.chevron {
+  position: absolute;
+  right: 8px;
+  height: 18px;
+  width: 18px;
+}
+
+.link {
+  font-size: 10px;
+  color: #5f6368;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.algobook {
+  height: 10px;
+  width: 10px;
+}
+
+.linkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: .5rem 0;
+  gap: .25rem;
+}
+
+.headlineContainer {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 0 0.5rem 0;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold !important;
+}
+
+.symbol {
+  height: 18px;
+  width: 18px;
+}
+
+.updatedText {
+  font-size: 11px;
+  font-style: italic;
+  padding: 0.25rem 0;
+}
+
+.logic {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.input {
+  border: none;
+  font-size: 14px;
+  padding: 4px 8px;
+  outline: none;
+  color: #5f6368;
+  width: 60px;
+  background-color: transparent;
+}
+
+.select {
+  border: none;
+  outline: none;
+  color: #5f6368;
+  font-size: 12px;
+  padding: 3.5px 18px 3.5px 8px;
+  border-left: 1px solid #ddd;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
