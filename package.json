@@ -1,6 +1,6 @@
 {
   "name": "currency-converter-widget",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "A widget that converts currencies from the current rates",
   "main": "./dist/index.js",
   "types": "index.d.ts",
