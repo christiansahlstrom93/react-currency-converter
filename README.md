@@ -8,6 +8,10 @@ The widget is fully customizable when it comes to styling, just provide your own
 
 ![default](https://storage.googleapis.com/algobook/currency-converter/Screenshot%202023-04-26%20at%2020.45.34.png)
 
+### Other free projects and APIs
+
+For more cool and free open source projects and APIs, check out our [website](https://algobook.info/opensource)
+
 ## Documentation
 
 For all documentation and information, please check out our [documentation page](https://algobook.info/docs/currency-converter).
