@@ -5,7 +5,6 @@ import symbol from "./symbol.svg";
 import symbol_bright from "./symbol_bright.svg";
 import expand from "./expand.svg";
 import expand_night from "./expand-night.svg";
-import algobook from "./algobook.png";
 import "./styles.css";
 
 export const CurrencyConverter = (props) => {
@@ -15,6 +14,7 @@ export const CurrencyConverter = (props) => {
     fromDefault = "EUR",
     toDefault = "USD",
     iconTheme = "DARK",
+    hideIcon = false,
   } = props;
   const [from, setFrom] = useState(fromDefault);
   const [to, setTo] = useState(toDefault);
@@ -63,11 +63,13 @@ export const CurrencyConverter = (props) => {
   return (
     <div className={`converter ${className}`}>
       <div className="headlineContainer">
-        <img
-          className="symbol"
-          alt="symbol"
-          src={iconTheme === "LIGHT" ? symbol_bright : symbol}
-        />
+        {!hideIcon ? (
+          <img
+            className="symbol"
+            alt="symbol"
+            src={iconTheme === "LIGHT" ? symbol_bright : symbol}
+          />
+        ) : null}
         <span>{label}</span>
       </div>
       <span className="updatedText">
@@ -89,11 +91,7 @@ export const CurrencyConverter = (props) => {
             className="select"
           >
             {currencies.map((c) => (
-              <option
-                key={c.code}
-                label={c.name}
-                value={c.code}
-              >
+              <option key={c.code} label={c.name} value={c.code}>
                 {c.name}
               </option>
             ))}
@@ -121,11 +119,7 @@ export const CurrencyConverter = (props) => {
             className="select"
           >
             {currencies.map((c) => (
-              <option
-                key={c.code}
-                label={c.name}
-                value={c.code}
-              >
+              <option key={c.code} label={c.name} value={c.code}>
                 {c.name}
               </option>
             ))}
@@ -138,7 +132,6 @@ export const CurrencyConverter = (props) => {
         </div>
       </div>
       <div className="linkContainer">
-        <img alt="alogbook" src={algobook} className="algobook" />
         <a
           href="https://algobook.info/"
           className="link"

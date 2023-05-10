@@ -38,6 +38,7 @@ declare module "currency-converter-widget" {
     fromDefault?: Currencies;
     toDefault?: Currencies;
     iconTheme?: "LIGHT" | "DARK";
+    hideIcon?: boolean;
   }
   const CurrencyConverter: (props: IConverterProps) => JSX.Element;
 }
