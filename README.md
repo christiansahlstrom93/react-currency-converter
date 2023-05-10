@@ -6,7 +6,7 @@ The widget is fully customizable when it comes to styling, just provide your own
 
 ## Default design
 
-![default](https://storage.googleapis.com/algobook/currency-converter/Screenshot%202023-04-26%20at%2020.45.34.png)
+![default](https://storage.googleapis.com/algobook/currency-converter/Screenshot%202023-05-10%20at%2016.47.27.png)
 
 ### Other free projects and APIs
 
