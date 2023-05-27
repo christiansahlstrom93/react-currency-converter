@@ -8,7 +8,7 @@ class Service {
 
   async getRate(from, to) {
     const response = await fetch(
-      `https://stocks.algobook.info/api/v1/exchange/rate?from=${from}&to=${to}`
+      `https://api.algobook.info/api/v1/exchange/rate?from=${from}&to=${to}`
     );
     return await response.json();
   }
