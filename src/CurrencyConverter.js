@@ -15,6 +15,7 @@ export const CurrencyConverter = (props) => {
     toDefault = "USD",
     iconTheme = "DARK",
     hideIcon = false,
+    ImageComp,
   } = props;
   const [from, setFrom] = useState(fromDefault);
   const [to, setTo] = useState(toDefault);
@@ -22,6 +23,15 @@ export const CurrencyConverter = (props) => {
 
   const [fromAmount, setFromAmount] = useState(1);
   const [toAmount, setToAmount] = useState("");
+
+  const renderImg = (src, alt, className, style = {}) => {
+    if (ImageComp) {
+      return (
+        <ImageComp src={src} alt={alt} className={className} style={style} />
+      );
+    }
+    return <img src={src} alt={alt} className={className} style={style} />;
+  };
 
   const fetch = async (from, to) => {
     const rates = await service.getRates(from, to);
@@ -63,13 +73,13 @@ export const CurrencyConverter = (props) => {
   return (
     <div className={`converter ${className}`}>
       <div className="headlineContainer">
-        {!hideIcon ? (
-          <img
-            className="symbol"
-            alt="symbol"
-            src={iconTheme === "LIGHT" ? symbol_bright : symbol}
-          />
-        ) : null}
+        {!hideIcon
+          ? renderImg(
+              iconTheme === "LIGHT" ? symbol_bright : symbol,
+              "symbol",
+              "symbol"
+            )
+          : null}
         <span>{label}</span>
       </div>
       <span className="updatedText">
@@ -96,11 +106,11 @@ export const CurrencyConverter = (props) => {
               </option>
             ))}
           </select>
-          <img
-            className="chevron"
-            alt="chevron"
-            src={iconTheme === "LIGHT" ? expand_night : expand}
-          />
+          {renderImg(
+            iconTheme === "LIGHT" ? expand_night : expand,
+            "chevron",
+            "chevron"
+          )}
         </div>
         <div className="inputContainer">
           <input
@@ -124,11 +134,11 @@ export const CurrencyConverter = (props) => {
               </option>
             ))}
           </select>
-          <img
-            className="chevron"
-            alt="chevron"
-            src={iconTheme === "LIGHT" ? expand_night : expand}
-          />
+          {renderImg(
+            iconTheme === "LIGHT" ? expand_night : expand,
+            "chevron",
+            "chevron"
+          )}
         </div>
       </div>
       <div className="linkContainer">
